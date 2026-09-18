@@ -1,0 +1,17 @@
+export const BASE_PACKAGE_TAG = "latest";
+export const BIN_DIR = "bin";
+export const CLI_CMD_NAME = "jive-template";
+export const INSTALL_SCRIPT = "install.js";
+export const PACKAGE_SCHEMA_FILE = "package.schema.json";
+export const LICENSE_FILE = "LICENSE";
+export const LOCAL_ALIAS_SUFFIX = "-local";
+export const MULTI_CALL_BINARY = "multi-call-binary";
+export const NPM_PACKAGE_SPEC = "npm@^11.5.1";
+export const NPM_REGISTRY_URL = "https://registry.npmjs.org";
+export const NPM_WEBSITE_URL = "https://www.npmjs.com";
+export const OUTDIR = "dist";
+export const PUBLISH_ORDER_FILE = "publish-order.json";
+export const README_FILE = "README.md";
+export const TARBALL_EXTENSION = ".tgz";
+export const WINDOWS_EXECUTABLE_SUFFIX = ".exe";
+export const WORKDIR = "build-temp";

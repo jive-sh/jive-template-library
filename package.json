@@ -1,0 +1,46 @@
+{
+  "$schema": "./package.schema.json",
+  "license": "MIT",
+  "name": "jive-template-library",
+  "version": "0.1.0",
+  "type": "module",
+  "peerDependencies": {
+    "effect": "^4.0.0-rc.115",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@effect/platform-bun": "^4.0.0-rc.115",
+    "@types/bun": "^1.3.14",
+    "@types/ejs": "^3.1.5",
+    "commander": "^13.1.0",
+    "effect": "^4.0.0-rc.115",
+    "effective-modules": "0.3.1-effect4",
+    "ejs": "^6.0.1",
+    "jsonc-parser": "^3.3.1",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "jive:cicd:get-config": "bun src/entrypoints/jive-template.ts cicd get-config",
+    "jive:cicd:build": "bun src/entrypoints/jive-template.ts cicd build",
+    "jive:cicd:audit": "jive-template cicd audit",
+    "jive:cicd:deploy:url": "jive-template cicd deploy-url",
+    "jive:cicd:upload-artifacts": "jive-template cicd upload-artifacts",
+    "jive:cicd:deploy": "bun src/entrypoints/jive-template.ts cicd deploy"
+  },
+  "jive": {
+    "cicd": {
+      "deploy": {
+        "verb": "Publish Tag",
+        "branches": {
+          "main": [
+            "latest"
+          ]
+        },
+        "previews": false,
+        "sequentially": true
+      },
+      "runsOnPullRequests": true,
+      "runsOn": "ubuntu-latest"
+    }
+  }
+}
